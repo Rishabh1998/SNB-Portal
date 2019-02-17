@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="upload">SNB Enterprises</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          International
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Kitchenware", upload_images_path(path: 'international/kitchenware'),class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Cutlery", upload_images_path(path: 'international/cutlery'),class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Tableware", upload_images_path(path: 'international/tableware'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Serveware", upload_images_path(path: 'international/serveware'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Barware", upload_images_path(path: 'international/barware'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Bath Accessories", upload_images_path(path: 'international/bath accessories'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Stock Pots & Pans", upload_images_path(path: 'international/stock pots & pans'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Petware", upload_images_path(path: 'international/petware'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Indian
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Casserols", upload_images_path(path: 'indian/casserols'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Cookware", upload_images_path(path: 'indian/cookware'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Cutlery", upload_images_path(path: 'indian/cutlery'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Fine Dine", upload_images_path(path: 'indian/fine dine'), rclass: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Ice Bucket", upload_images_path(path: 'indian/ice bucket'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Packaging", upload_images_path(path: 'indian/packaging'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Storage", upload_images_path(path: 'indian/storage'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Table Essentials", upload_images_path(path: 'indian/table essentials'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Utensils", upload_images_path(path: 'indian/utensils'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Water Jugs", upload_images_path(path: 'indian/water jugs'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+      <%= button_to 'Logout', destroy_session_images_path, method: :get, :class => "btn btn-outline-danger" %>
+  </div>
+</nav>

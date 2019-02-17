@@ -1,0 +1,37 @@
+<% if session[:user] != nil %>
+  <script type="text/javascript">
+      window.location.href="/images/upload"  // put your correct path in a string here
+  </script>
+<% end %>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <%= form_tag login_images_path ,class: "form-signin" do %>
+            <div class="form-label-group">
+                <%= text_field_tag :user, nil, :class => 'form-control',placeholder: 'Enter Username', :required => "true"%>
+              <label for="user">Username</label>
+            </div>
+            <br>
+            <div class="form-label-group">
+              <%= password_field_tag :password, nil, :class => 'form-control',:placeholder => "Enter Password", :required => "true" %>
+              <label for="password">Password</label>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+            </div>
+                <%= submit_tag "Sign In",:class => "btn btn-lg btn-primary btn-block text-uppercase" %>
+            <hr class="my-4">
+              <% end %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
