@@ -21,7 +21,8 @@ class ImagesController < ApplicationController
       session[:user] = user
       redirect_to action: "upload"
     else
-      render json: {status: "Login Failed",message: "Username or password you provided is incorrect"},status: :ok
+      flash.now[:danger] = "Invalid username or password."
+      render action: "index"
     end
   end
 
@@ -30,7 +31,7 @@ class ImagesController < ApplicationController
     if @path == nil
       @path = "international/kitchenware"
     end
-    @images = Dir.glob(Rails.root.join("public/#{@path}/*.png"))
+    @images = Dir.glob(Rails.root.join("public/#{@path}/*.*"))
   end
 
   def image_upload
