@@ -108,3 +108,28 @@ body {
     color: white;
     background-color: #3b5998;
 }
+
+.navbar {
+    list-style-type: none;
+    /* this is what will keep the navbar from stretching */
+    max-height: 60px;
+    border: 1px solid black;
+    /* overflow: hidden; */
+}
+
+.navbar li {
+    display: inline;
+    padding-right: 5px;
+}
+
+.navbar li img {
+    /* aligns the image with the top of the content in the nav bar */
+    vertical-align: top;
+    /* modifying width also modifies separation to nav links */
+    width: 120px;
+    /* modify height to show more/less of logo */
+    height: 120px;
+    margin-top: 20px;
+    padding-right: 5px;
+
+}
