@@ -58,6 +58,20 @@
           <div class="dropdown-divider"></div>
         </div>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Banner
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Indian", upload_images_path(path: 'carousel/indian'), class: 'dropdown-item' %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "International", upload_images_path(path: 'carousel/international'), class: 'dropdown-item' %>
+        </div>
+      </li>
+
+
+
     </ul>
       <%= button_to 'Logout', destroy_session_images_path, method: :get, :class => "btn btn-outline-danger" %>
   </div>

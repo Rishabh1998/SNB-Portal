@@ -41,7 +41,7 @@
 <% @images.each do |image| %>
               <div class="col-md-4">
 
-              <%= image_tag("/#{@path}/#{image.split('/').last}",height: "200",width: "auto",style: "padding-bottom:1em;") %>
+              <%= image_tag("#{@path}/#{image.split('/').last}",height: "200",width: "auto",style: "padding-bottom:1em;") %>
 
        <p align="center"> <%= link_to "Delete Image" ,{ :controller => 'images', :action => 'destroy', name: @path+"/"+image.split("/").last}, data: {confirm: 'Are you Sure?', :method => :delete, :remote => true},:class => "btn btn-danger" %>
        </p>
@@ -53,5 +53,5 @@
       </div>
   </div>
   </div>
-
+<img src="/home/rishabh/websites/snbenterprises-website/public/images/enterprises/products/indian/casserols/images.jpeg">
 </body>

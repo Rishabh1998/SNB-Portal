@@ -31,13 +31,13 @@ class ImagesController < ApplicationController
     if @path == nil
       @path = "international/kitchenware"
     end
-    @images = Dir.glob(Rails.root.join("public/#{@path}/*.*"))
+    @images = Dir.glob("/home/ninequeens/websites/snbenterprises-website/public/images/enterprises/products/#{@path}/*.*")
   end
 
   def image_upload
     path = params[:path]
     file = params[:picture]
-    File.open(Rails.root.join('public/',path, file.original_filename), 'wb') do |f|
+    File.open('/home/ninequeens/websites/snbenterprises-website/public/images/enterprises/products/'+path+'/'+file.original_filename, 'wb') do |f|
       f.write(file.read)
     end
       redirect_to upload_images_path(path: path)
@@ -50,7 +50,7 @@ class ImagesController < ApplicationController
 
   def destroy
     file_name = params[:name]
-    File.delete(Rails.root.join('public',file_name))
+    File.delete(Rails.root.join('/home/ninequeens/websites/snbenterprises-website/public/images/enterprises/products/',file_name))
     respond_to do |format|
       format.js {render inline: "location.reload();" }
     end
