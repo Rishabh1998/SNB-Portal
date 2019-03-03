@@ -14,7 +14,7 @@
       <div class="card card-signin my-5">
         <div class="card-body">
           <h5 class="card-title text-center">Welcome <%= session[:user] %></h5>
-          <h6 class="card-title text-center">Upload Images from here</h6>
+          <h6 class="card-title text-center">Upload Images to your <%= name %> Gallery</h6>
           <br>
           <%= form_tag image_upload_images_path(path: @path),:multipart => "true" do %>
             <div class="form-label-group">
