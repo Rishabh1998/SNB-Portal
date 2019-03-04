@@ -51,6 +51,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-puma', require: false
 
 end
 
